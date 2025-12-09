@@ -1,0 +1,12 @@
+[project]
+name = "excel-duplicate-deletion"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "openpyxl>=3.1.5",
+    "pandas>=2.3.3",
+    "tabulate>=0.9.0",
+    "uuid>=1.30",
+]
