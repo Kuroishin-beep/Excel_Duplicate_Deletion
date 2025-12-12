@@ -68,7 +68,7 @@ if 'current_matches' not in st.session_state:
 # PAGE LAYOUT
 # -----------------------------
 st.set_page_config(layout="wide")
-st.title("Excel Duplicate Delete (Cumulative)")
+st.title("Excel Duplicate Delete")
 
 # STEP 1: UPLOAD EXCEL
 uploaded_file = st.file_uploader("Upload an Excel file", type=["xlsx", "xls"])
