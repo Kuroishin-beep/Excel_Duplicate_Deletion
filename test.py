@@ -32,10 +32,10 @@ def get_rows_to_delete(df, search_term):
 def delete_rows_preserve_formatting(file_path, indices_to_delete):
     try:
         wb = openpyxl.load_workbook(file_path)
-        ws = wb.active 
+        ws = wb.active  
         
         # Convert Pandas Index (0-based) to Excel Row (1-based + Header)
-        # We add 2 because Excel Row 1 is header, Row 2 is Index 0.
+        # We add 2 because Excel Row 1 is header, Row 2 is Index 0. 
         excel_rows_to_delete = [i + 2 for i in indices_to_delete]
         
         # IMPORTANT: Sort descending to delete from bottom up
