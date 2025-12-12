@@ -1,0 +1,31 @@
+name: Excel Duplicate Tool CI/CD
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repo
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: "3.11"
+
+    - name: Install dependencies
+      run: |
+        pip install -r requirements.txt
+
+    - name: Run tests
+      run: echo "No tests yet."
+
+    - name: Deploy to Streamlit Cloud
+      uses: streamlit/streamlit-app-deploy@v1
+      with:
+        app-path: test1.py
